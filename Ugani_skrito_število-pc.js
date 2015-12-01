@@ -11,12 +11,12 @@ var number = Math.floor(Math.random() * (y-x+1)+ x); // funkcija generiranja nak
         if (hidden > number)
             {
               x=number;
-              number = Math.floor((Math.random() * y) + x);
+              number = Math.floor(Math.random() * (y-x+1)+ x);
             }
     	if (hidden < number)
             {
               y=number;
-              number = Math.floor((Math.random() * y) + x);
+              number = Math.floor(Math.random() * (y-x+1)+ x);
             }
        
             result.push(number); 
