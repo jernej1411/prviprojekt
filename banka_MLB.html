@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="si">
+
+<head>
+	<title>Banka MLB</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+</head>
+
+<body ng-app="baka_mlb">
+
+   <div class="container well" ng-controller="demo">
+      <h1>Kalkulator varčevanja</h1>
+      Vnesi višino mesečnega vplačila (€):
+      <input type="number" ng-model="vplac" class="form-control" />
+	   Število mesecev:
+      <input type="number" ng-model="smesec" class="form-control" />
+	   Mesečno obrestno mero (%):
+	   <input type="number" step="0.01" ng-model="obre_m" class="form-control" />
+      <button class="btn btn-primary" ng-click="izracunajV(data)">Izračunaj</button>
+	   <b>Privarčevan znesek: {{data}}</b>
+    </div>  
+   <div class="container well" ng-controller="demo1">
+      <h1>Kalkulator izplačil</h1>
+      Vnesi višino mesečnega izplačila (€):
+      <input type="number" ng-model="izplac" class="form-control" />
+	   Število mesecev:
+      <input type="number" ng-model="smesec" class="form-control" />
+      <button class="btn btn-primary" ng-click="izracunajI(data)">Izračunaj</button>
+	   <b>Na računu moraš imeti: {{data}}</b>
+    </div> 
+
+	<script src="banka_MLB.js"></script>
+
+</html>
