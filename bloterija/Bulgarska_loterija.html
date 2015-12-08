@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<title> Bulgarska loterija</title>
+
+</head>
+
+<body ng-app="Bulgarska_loterija">
+
+ <div class="container" ng-controller="loterija">
+    <div class="row">
+      <div class="col-xs-12 well">
+        
+       <p>{{ result }}</p>
+        <button class="btn btn-primary" ng-click="zrebaj();">Začni žreb</button>
+        
+      </div>
+    </div>
+  </div>
+
+	<script src="Bulgarska_loterija.js"></script>
+
+</html>
