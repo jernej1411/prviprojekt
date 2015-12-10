@@ -1,0 +1,29 @@
+<html>
+	<head>      
+ 		<meta charset="utf-8">
+        	<title>Frello</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+			
+	</head>
+
+   <body ng-app="frello">
+   		 <div class="container well" ng-controller="frellocon">
+        <form>
+        <input placeholder="Vnesi opravilo..." type="text" ng-model="opravilo" ng-model-instant />
+        <button class="btn btn-primary" ng-click="add()">Dodaj opravilo</button>
+      </form>
+     
+		<ul>
+        <li ng-repeat="izpis in izpisi">
+          <input type="checkbox" ng-model="izpis.done"/>
+          <span>{{izpis.text}}</span>
+        </li>
+      </ul>
+	  
+		<button class="btn btn-danger" ng-click="remove()">Izbriši izbrane</button>
+    </div>
+	   <script src="frello.js"></script>
+  </body>
+</html>
