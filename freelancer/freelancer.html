@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<title> freelancer.si</title>
+
+</head>
+
+<body ng-app="freelancer">
+
+   <div class="container" ng-controller="freelancer">
+    <div class="row">
+      <div class="col-xs-12 well">
+      
+	   		<form name="freelancer">
+		  <label>Izberi povpraševanje:</label>  <select ng-options="item for item in option" ng-model="option">
+				<option>povpraševanje po spletni strani</option>
+    			<option>povpraševanje po AngularJS obrazcu</option>
+    			<option>povpraševanje po svetovanju</option>
+				</select>
+				<br>
+				<div class="form-group">
+				<label>Ime: </label>
+				<input type="text" name="ime" ng-model="ime" class="form-control" ng-required="true" ng-minlength="3" />
+				</div>
+					<p class="text-danger" ng-show="freelancer.ime.$error.required && freelancer.ime.$touched">
+					To polje je obvezno!</p>
+          <label>Priimek:</label> <input type="text" name="priimek" ng-model="priimek" class="form-control" ng-required="true" ng-minlength="3" />
+				<p class="text-danger" ng-show="freelancer.priimek.$error.required && freelancer.priimek.$touched">
+					To polje je obvezno!</p>
+			<label>Email:</label>	<input type="email" name="email" ng-model="email" class="form-control" ng-required="true" ng-minlength="5" />
+				<p class="text-danger" ng-show="freelancer.email.$error.required && freelancer.email.$touched">
+					To polje je obvezno!</p>
+			<label>Naslov: (ulica in hišna številka)</label>	<input type="text" name="naslov" ng-model="naslov" class="form-control" ng-required="true" ng-minlength="4" />
+				<p class="text-danger" ng-show="freelancer.naslov.$error.required && freelancer.naslov.$touched">
+					To polje je obvezno!</p>
+			<label>Poštna številka:</label>	<input type="number" name="pstevilka" ng-model="pstevilka" class="form-control" ng-required=”true” ng-minlength="4" ng-pattern=”/^\d+$/” />
+				<p class="text-danger" ng-show="freelancer.pstevilka.$error.required && freelancer.pstevilka.$touched">
+					To polje je obvezno!</p>
+				<label>Telefonska številka:</label> <input type="number" name="tstevilka" ng-model="tstevilka" class="form-control" 
+ng-required=”true” ng-minlength="9" ng-pattern=”/^\d+$/” />
+				<p class="text-danger" ng-show="freelancer.tstevilka.$error.required && freelancer.tstevilka.$touched">
+					To polje je obvezno!</p>
+	   
+	   
+	   		</form>
+		</div>
+	   </div>
+	 </div>
+
+	 <script src="freelancer.js"></script>
+
+</html>

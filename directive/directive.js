@@ -36,16 +36,18 @@ angular.module('app').directive('stevilo', function(){
   
   return {
       scope: {
-      number: '='
-    },
-    restrict: 'EA',
-    template: '<div>{{ number }}</div>',
+	  	number: '='	
+	  },
+    restrict: 'EA', 
+	  
+    template: '{{ number }}',
     controller: function($scope){
+		
 	$scope.$watch('number', function(select)
     {
-		var select = '';
-		this.number = select;
+		     
 		switch (select) {
+				
     case 1:
        select = "Januar";
         break;
@@ -77,17 +79,18 @@ angular.module('app').directive('stevilo', function(){
        select = "Oktober";
         break;
 	case 11:
-       select = "november";
+       select = "November";
         break;
 	case 12:
        select = "December";
         break;
-	default :
-	   select = "Napaka! Nisi izbral števila od 1 do 12!";
+	
 		
+		$scope.number = select;
 }
-    });
-           
+		
+    }); 
+      
     },
     link: function(scope, element, attributes) {
             

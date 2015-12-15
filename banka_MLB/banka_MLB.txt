@@ -1,0 +1,14 @@
+Banka MLB želi svojim komitentom ponuditi kalkulator varcevanja in izplacil.
+
+Za kalkulator varcevanja morate od uporabnika sprejeti tri podatke:
+
+višino mesecnega vplacila,
+število mesecev ter
+mesecno obrestno mero (v %).
+Nato morate izracunati celotno vrednost in jo prikazati uporabniku.
+
+Za kalkulator izplacil morate od uporabnika sprejeti dva podatka:
+
+višino mesecnega izplacila ter
+število mesecev.
+Uporabniku morate prikazati koliko denarja mora imeti na racunu, da se izide izracun izplacevanja.
