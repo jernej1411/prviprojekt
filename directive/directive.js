@@ -1,5 +1,5 @@
 angular.module('app', []);
-/*
+
 angular.module('app').directive('izpisZnakov', function(){
   
   return {
@@ -9,19 +9,20 @@ angular.module('app').directive('izpisZnakov', function(){
     restrict: 'EA',
     template: '<div class={{color}}>{{ string }}</div>',
     controller: function($scope){
-		var string ='';
-	$scope.$watch('string', function(string)
-    {
 		
-         if (this.string.length < 10)
+	$scope.$watch('string', function(color)
+    {
+		var color = '';
+		var string = '';
+         if ($scope.string.length < 10)
 				{
-					 this.string = 'text-success';
-					
+					color = 'text-success';	
 				}
 		else
 				{
-					this.string = 'text-danger';
+					color = 'text-danger';
 				}
+		$scope.color = color;
     });
            
     },
@@ -30,8 +31,27 @@ angular.module('app').directive('izpisZnakov', function(){
         }
   };
   
-}); */
+}); 
 
+angular.module('app').directive('newsletter', function() {
+  return {
+    restrict: 'EA',
+    template: '<input ng-model="prijava" type="text">'+   '{{newslette}}' +
+			  '<button class="btn btn-primary" ng-click="checkin()">Prijava</button>',
+     scope:{
+         newslette: '='
+       },
+    controller: function($scope){
+		
+      $scope.checkin = function(){
+		  
+        alert(" Prijava je bila uspešna");
+      }
+	  
+    }
+
+  }
+});
 angular.module('app').directive('stevilo', function(){
   
   return {
@@ -84,11 +104,10 @@ angular.module('app').directive('stevilo', function(){
 	case 12:
        select = "December";
         break;
-	
 		
-		$scope.number = select;
+
 }
-		
+		$scope.number = select;
     }); 
       
     },
